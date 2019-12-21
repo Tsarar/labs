@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style>
+            .title{
+                background: darkorchid;
+                width: 100%;
+            }
+
+            .odd{
+                background: darkgoldenrod;
+            }
+
+            .even{
+                background: yellowgreen;
+            }
+        </style>
+        <script>
+            function Go() {
+                var interval = document.getElementById('inp').value;
+                if (!interval){
+                    alert('Input is empty')
+                    return;
+                }
+                var str = '<table id="tabl" width="100%" border="1"><tr class="title"><td colspan="5" >title</td></td>'
+                for (i=1; i<5; i++) {
+                    if (i % 2 == 0){
+                        str += '<tr class="odd">';
+                    }
+                    else{
+                        str += '<tr class="even">';
+                    }
+                    for (j=1; j<6; j++) 
+                        str += "<td>" + i + j + "<\/td>";
+                    str += "<\/tr>";
+                }
+                str += "<\/table> ";
+                var div = document.getElementById('outhertable');
+                div.insertAdjacentHTML('beforeend', str);
+                setInterval(() => AppendElement(), interval * 1000)
+            }
+
+            function AppendElement() {
+                var elem = document.getElementById('tabl');
+                var str = '';
+                for (i=1; i<5; i++) {
+                    if (i % 2 == 0){
+                        str += '<tr class="odd">';
+                    }
+                    else{
+                        str += '<tr class="even">';
+                    }
+                    for (j=1; j<6; j++) 
+                        str += "<td>" + i + j + "<\/td>";
+                    str += "<\/tr>";
+                }
+                elem.insertAdjacentHTML('beforeend', str);
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input id="inp" type="text" placeholder="Введите интервал в сек"/>
+            <button onClick="Go()">Go</button>
+            <div id="outhertable"></div>
+        </div>
+    </body>
+</html>

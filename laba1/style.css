@@ -1,0 +1,103 @@
+.row-vertical{
+   transform: rotate(90deg);
+   transform-origin: center;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    font: inherit;
+    background-color: bisque;
+}
+
+table, th, td
+{
+    border: solid 1px black;
+}
+
+tr{
+   height: 50px;
+}
+
+td{
+    height: 40px;
+    width: 90px;
+    padding: 5px;
+}
+
+td:first{
+    font-weight: bold;
+}
+
+.name-right-style{
+    font-weight: bold;
+    font-size: 13pt;
+    vertical-align: middle;
+    text-align: right;
+    float: right;
+}
+
+span.name-style{
+    margin-bottom: 3px;
+    font-weight: bold;
+    font-size: 13pt;
+}
+
+span.name-style, .one-line-el{
+    display: block;
+} 
+
+.elements{
+    font-weight: 100;
+    font-size: 8pt;
+    word-break: break-word;
+}
+
+.name-div{
+    display: inline-block;
+}
+
+.num-div{
+    display: inline-block;
+}
+
+.num-col{
+    width: 20px;
+    font-size: 12pt;
+    font-weight: normal;
+    text-align: center;
+}
+
+.right-side
+{
+    float: right;
+    text-align: right;
+}
+
+form{
+    width: 20%;
+    padding: 10px;
+}
+
+input, select{
+    display: block;
+    margin-bottom: 5px;
+    color: teal;
+    width: 100%;
+    border: 2px solid teal;
+}
+
+legend{
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: teal;
+}
+
+.save-btn
+{
+    width: 50px;
+    height: 20px;
+    background-color: teal;
+    color: white;
+    float: right;
+}
